@@ -5,10 +5,10 @@ const app = express();
 app.use(express.json());
 
 const PI_API_KEY = process.env.PI_API_KEY;
-
 app.get("/", (req, res) => {
   res.send("Pi payment server running");
 });
+
 
 app.post("/approve", async (req, res) => {
   const { paymentId } = req.body;
